@@ -11,13 +11,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="heading">
-        <img src="assets/images/logo.png" alt="hangman game logo"> Hangman Game
-    </h1>
+    <div class="relative-div">
+        <h1 class="heading">
+            <img class="logo" src="assets/images/logo.png" alt="hangman game logo"> Hangman Game
+        </h1>
+        <button class="btn">Rules</button>
+    </div>
 
     <div class="game-area">
 
-        <div>
+        <div class="pic-guess-area">
             <div class="pic-area">
 
             </div>
@@ -31,13 +34,14 @@
             <p>Guess the animal</p>
             <p id="wordInput"></p>
             <div id="keyboard"></div>
-            <button class="btn">Reset</button>
         </div>
 
 
         <div class="score-area">
-            <p class="scores">Wins <span id="win">0</span> </p>
-            <p class="scores">Losses <span id="loss">0</span> </p>
+            <div class="scores-div">
+                <p class="scores">Wins <span id="win">0</span> </p>
+                <p class="scores">Losses <span id="loss">0</span> </p>
+            </div>
         </div>
 
     </div>
