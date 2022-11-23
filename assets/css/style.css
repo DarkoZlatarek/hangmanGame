@@ -69,12 +69,34 @@ body {
     margin: 5px auto;
 }
 
-#keyboard {
+#key-container {
     width: 90%;
     height: 60%;
     background-color: rgba(0, 255, 255, 0.147);
     margin: auto;
 }
+
+#key-container button {
+    height: 25px;
+    width: 5%;
+    max-width: 55px;
+    margin: 3px;
+    border-radius: 3px;
+    border: none;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #ff00fb3c;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  #key-container button:active {
+    background-color: #ff00fb8c;
+  }
 
 .score-area {
     background-color: #8000803d;
