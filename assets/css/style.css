@@ -46,7 +46,6 @@ body {
     background-color: #00000038;
     height: 35vh;
     margin: auto;
-    position: relative;
 }
 
 .pic-area {
@@ -54,16 +53,6 @@ body {
     margin: auto;
     width: 60%;
     height: 100%;
-}
-
-.guess-area {
-    background-color: #0000ff32;
-    position: absolute;
-    width: 15%;
-    height: 20%;
-    font-size: 2rem;
-    right: 10px;
-    top: 10px;
 }
 
 .play-area {
@@ -81,7 +70,7 @@ body {
 }
 
 #keyboard {
-    width: 80%;
+    width: 90%;
     height: 60%;
     background-color: rgba(0, 255, 255, 0.147);
     margin: auto;
