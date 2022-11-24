@@ -45,6 +45,7 @@ var animals = [
 
 let answer = "";
 let guessed = [];
+let animalStatus = null;
 
 /**
  * Will generate a random animal from the animals array
@@ -76,5 +77,12 @@ keys.forEach(key => {
 });
 }
 
+function guessedAnimal() {
+    animalStatus = answer.split("").map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join("");
+
+    document.getElementById("word-input").innerHTML = animalStatus;
+}
+
 randomAnimal();
 createKeys();
+guessedAnimal();
