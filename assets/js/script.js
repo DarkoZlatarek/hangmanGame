@@ -43,25 +43,25 @@ var animals = [
     "panda"
 ]
 
+let answer = "";
+let guessed = [];
 
+/**
+ * Will generate a random animal from the animals array
+ * for the user to guess
+ */
+function randomAnimal() {
+    answer = animals[Math.floor(Math.random() * animals.length)];
+}
+
+function createKeys() {
+
+const keyboard = document.querySelector("#key-container");
 const keys = [
     "q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
     "a", "s", "d", "f", "g", "h", "j", "k", "l",
     "z", "x", "c", "v", "b", "n", "m"
 ];
-
-
-let answer = "";
-let guessed = [];
-const keyboard = document.querySelector("#key-container");
-
-/**
- * Will generate a random animal from the animals array
- * for the user tu guess
- */
-function randomAnimal() {
-    answer = animals[Math.floor(Math.random() * animals.length)];
-}
 
 keys.forEach(key => {
     const buttonElement = document.createElement("button");
@@ -70,10 +70,11 @@ keys.forEach(key => {
     buttonElement.setAttribute("id", key);
     keyboard.appendChild(buttonElement);
 
-
     if (insertLineBreak) {
-        buttonElement.nextSibling(document.createElement("br"));
+        keyboard.appendChild(document.createElement("br"));
     }
 });
+}
 
 randomAnimal();
+createKeys();
