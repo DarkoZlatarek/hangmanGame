@@ -69,6 +69,7 @@ keys.forEach(key => {
     const insertLineBreak = ["p", "l"].indexOf(key) !== -1;
     buttonElement.textContent = key;
     buttonElement.setAttribute("id", key);
+    buttonElement.addEventListener('click', () => handleClick(key));
     keyboard.appendChild(buttonElement);
 
     if (insertLineBreak) {
@@ -81,6 +82,22 @@ function guessedAnimal() {
     animalStatus = answer.split("").map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join("");
 
     document.getElementById("word-input").innerHTML = animalStatus;
+}
+
+function handleClick(chosenKey) {
+    if (guessed.indexOf(chosenKey) === -1) {
+        guessed.push(chosenKey);
+    } else {
+        null;
+    };
+
+    document.getElementById(chosenKey).setAttribute("disabled", true);
+
+    alert(answer);
+
+    if (answer.indexOf(chosenKey) >= 0) {
+        guessedAnimal();
+    }
 }
 
 randomAnimal();
