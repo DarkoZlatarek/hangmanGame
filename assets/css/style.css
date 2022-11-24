@@ -44,7 +44,7 @@ body {
 .pic-guess-area {
     max-width: 80%;
     background-color: #00000038;
-    height: 35vh;
+    height: 252px;
     margin: auto;
 }
 
@@ -52,6 +52,13 @@ body {
     background-color: #ec000027;
     margin: auto;
     width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic-area img {
     height: 100%;
 }
 
