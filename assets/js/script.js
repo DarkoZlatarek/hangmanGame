@@ -55,6 +55,9 @@ function randomAnimal() {
     answer = animals[Math.floor(Math.random() * animals.length)];
 }
 
+/**
+ * Will create a keyboard for the game
+ */
 function createKeys() {
 
 const keyboard = document.querySelector("#key-container");
@@ -78,12 +81,22 @@ keys.forEach(key => {
 });
 }
 
+/**
+ * Will take the answer and split it into letters,
+ * and then push the letter to it's place if it
+ * exists in the answer
+ */
 function guessedAnimal() {
     animalStatus = answer.split("").map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join("");
 
     document.getElementById("word-input").innerHTML = animalStatus;
 }
 
+
+/**
+ * Will push the chosen letters into guessed array
+ * or will run the function guessedAnimal
+ */
 function handleClick(chosenKey) {
     if (guessed.indexOf(chosenKey) === -1) {
         guessed.push(chosenKey);
@@ -92,8 +105,6 @@ function handleClick(chosenKey) {
     };
 
     document.getElementById(chosenKey).setAttribute("disabled", true);
-
-    alert(answer);
 
     if (answer.indexOf(chosenKey) >= 0) {
         guessedAnimal();
