@@ -46,6 +46,7 @@ var animals = [
 let answer = "";
 let guessed = [];
 let animalStatus = null;
+let wrongGuess = 0;
 
 /**
  * Will generate a random animal from the animals array
@@ -106,14 +107,21 @@ function handleClick(chosenKey) {
 
 // Disables already chosen letter
     document.getElementById(chosenKey).setAttribute("disabled", true);
-    
+
 /** 
 *If chosen letter exists in the answer,
 *guessedAnimal function will be executed
 */
     if (answer.indexOf(chosenKey) >= 0) {
         guessedAnimal();
-    }
+    } else if (answer.indexOf(chosenKey) === -1) {
+            wrongGuess++;
+            changePic();
+        }
+};
+
+function changePic() {
+    document.getElementById("pic").src = `assets/images/hangmanGamePic` + wrongGuess + `.png`;
 }
 
 randomAnimal();

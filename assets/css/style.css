@@ -48,7 +48,7 @@ body {
     margin: auto;
 }
 
-.pic-area {
+#pic-area {
     background-color: #ec000027;
     margin: auto;
     width: 60%;
@@ -58,7 +58,7 @@ body {
     align-items: center;
 }
 
-.pic-area img {
+#pic-area img {
     height: 100%;
 }
 
