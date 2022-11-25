@@ -111,6 +111,8 @@ function handleClick(chosenKey) {
 /** 
 *If chosen letter exists in the answer,
 *guessedAnimal function will be executed
+*otherwise wrongGuess gets increented by 1
+*and changePic function is executed
 */
     if (answer.indexOf(chosenKey) >= 0) {
         guessedAnimal();
@@ -120,6 +122,9 @@ function handleClick(chosenKey) {
         }
 };
 
+/**
+ * Will change img based on wrongGuess value
+ */
 function changePic() {
     document.getElementById("pic").src = `assets/images/hangmanGamePic` + wrongGuess + `.png`;
 }
