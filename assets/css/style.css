@@ -107,6 +107,10 @@ body {
     background-color: #ff00fb8c;
   }
 
+  #key-container button:disabled {
+    background-color: #8000803d;
+  }
+
 .score-area {
     background-color: #8000803d;
     width: 80%;

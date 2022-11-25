@@ -84,7 +84,7 @@ keys.forEach(key => {
 /**
  * Will take the answer and split it into letters,
  * and then push the letter to it's place if it
- * exists in the answer
+ * exists in the guessed array
  */
 function guessedAnimal() {
     animalStatus = answer.split("").map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join("");
@@ -94,8 +94,8 @@ function guessedAnimal() {
 
 
 /**
- * Will push the chosen letters into guessed array
- * or will run the function guessedAnimal
+ * Will push the chosen letters into guessed array if it
+ * does not already exist there, and do nothing if it does
  */
 function handleClick(chosenKey) {
     if (guessed.indexOf(chosenKey) === -1) {
@@ -104,8 +104,13 @@ function handleClick(chosenKey) {
         null;
     };
 
+// Disables already chosen letter
     document.getElementById(chosenKey).setAttribute("disabled", true);
-
+    
+/** 
+*If chosen letter exists in the answer,
+*guessedAnimal function will be executed
+*/
     if (answer.indexOf(chosenKey) >= 0) {
         guessedAnimal();
     }
