@@ -142,37 +142,37 @@ function resetGame() {
 function getHintOn() {
     document.getElementById("hint-overlay").style.display = "block";
     if (answer === "dog") {
-        document.getElementById("hint-overlay").innerHTML = `Men's best friend!`;
+        document.getElementById("hint-overlay-text").innerHTML = `Men's best friend!`;
     } else if (answer === "cat") {
-        document.getElementById("hint-overlay").innerHTML = `Dog's enemy!`;
+        document.getElementById("hint-overlay-text").innerHTML = `Dog's enemy!`;
     } else if (answer === "lion") {
-        document.getElementById("hint-overlay").innerHTML = `King of the animals!`;
+        document.getElementById("hint-overlay-text").innerHTML = `King of the animals!`;
     } else if (answer === "tiger") {
-        document.getElementById("hint-overlay").innerHTML = `Not a lion!`;
+        document.getElementById("hint-overlay-text").innerHTML = `Not a lion!`;
     } else if (answer === "cow") {
-        document.getElementById("hint-overlay").innerHTML = `Will say moo!`;
+        document.getElementById("hint-overlay-text").innerHTML = `Will say moo!`;
     } else if (answer === "giraffe") {
-        document.getElementById("hint-overlay").innerHTML = `Longest neck!`;
+        document.getElementById("hint-overlay-text").innerHTML = `Longest neck!`;
     } else if (answer === "frog") {
-        document.getElementById("hint-overlay").innerHTML = `Will become a prince when kissed!`;
+        document.getElementById("hint-overlay-text").innerHTML = `Will become a prince when kissed!`;
     } else if (answer === "crocodile") {
-        document.getElementById("hint-overlay").innerHTML = `Not an alligator!`;
+        document.getElementById("hint-overlay-text").innerHTML = `Not an alligator!`;
     } else if (answer === "alligator") {
-        document.getElementById("hint-overlay").innerHTML = `Not a crocodile!`;
+        document.getElementById("hint-overlay-text").innerHTML = `Not a crocodile!`;
     } else if (answer === "snake") {
-        document.getElementById("hint-overlay").innerHTML = `Moves without legs!`;
+        document.getElementById("hint-overlay-text").innerHTML = `Moves without legs!`;
     } else if (answer === "shark") {
-        document.getElementById("hint-overlay").innerHTML = `Main character in Jaws movie!`;
+        document.getElementById("hint-overlay-text").innerHTML = `Main character in Jaws movie!`;
     } else if (answer === "crow") {
-        document.getElementById("hint-overlay").innerHTML = `Black bird!`;
+        document.getElementById("hint-overlay-text").innerHTML = `Black bird!`;
     } else if (answer === "rooster") {
-        document.getElementById("hint-overlay").innerHTML = `Wakes you up in the morning!`;
+        document.getElementById("hint-overlay-text").innerHTML = `Wakes you up in the morning!`;
     } else if (answer === "zebra") {
-        document.getElementById("hint-overlay").innerHTML = `Black and white horse!`;
+        document.getElementById("hint-overlay-text").innerHTML = `Black and white horse!`;
     } else if (answer === "wolf") {
-        document.getElementById("hint-overlay").innerHTML = `Howls at the moon!`;
+        document.getElementById("hint-overlay-text").innerHTML = `Howls at the moon!`;
     } else if (answer === "panda") {
-        document.getElementById("hint-overlay").innerHTML = `Black and white cute bear!`;
+        document.getElementById("hint-overlay-text").innerHTML = `Black and white cute bear!`;
     } 
 }
 
