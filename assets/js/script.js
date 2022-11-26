@@ -59,7 +59,8 @@ keys.forEach(key => {
 /**
  * Will take the answer and split it into letters,
  * and then push the letter to it's place if it
- * exists in the guessed array
+ * exists in the guessed array otherwise it will
+ * put "_" in it's place
  */
 function guessedAnimal() {
     animalStatus = answer.split("").map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join("");
@@ -85,7 +86,7 @@ function handleClick(chosenKey) {
 /** 
 *If chosen letter exists in the answer,
 *guessedAnimal function will be executed
-*otherwise wrongGuess gets increented by 1
+*otherwise wrongGuess gets incresed by 1
 *and changePic function is executed
 */
     if (answer.indexOf(chosenKey) >= 0) {
@@ -112,7 +113,8 @@ function gameWon() {
     if (animalStatus === answer) {
         let oldScore = parseInt(document.getElementById("win").innerText);
         document.getElementById("win").innerText = ++oldScore;
-        document.getElementById("key-container").innerHTML = `Well done! That was correct!<br> <button id="reset">Play again!</button>`;
+        document.getElementById("key-container").innerHTML = `Well done! That was correct!<br> <button id="reset" 
+        onclick="resetGame()">Play again!</button>`;
     }
 }
 
@@ -124,8 +126,17 @@ function gameLost() {
         let oldScore = parseInt(document.getElementById("loss").innerText);
         document.getElementById("loss").innerText = ++oldScore;
         document.getElementById("key-container").innerHTML = `Unfortunately you ran out of possible guesses.<br>
-        Correct answer was: ${answer}!<br><button id="reset">Play again!</button>`;
+        Correct answer was: ${answer}!<br><button id="reset" onclick="resetGame()">Play again!</button>`;
     }
+}
+
+function resetGame() {
+    guessed = [];
+    wrongGuess = 0;
+    document.getElementById("pic").src = `assets/images/hangmanGamePic0.png`;
+    randomAnimal();
+    guessedAnimal();
+    createKeys();
 }
 
 randomAnimal();
