@@ -116,9 +116,11 @@ function handleClick(chosenKey) {
 */
     if (answer.indexOf(chosenKey) >= 0) {
         guessedAnimal();
+        gameWon();
     } else if (answer.indexOf(chosenKey) === -1) {
             wrongGuess++;
             changePic();
+            gameLost();
         }
 };
 
@@ -127,6 +129,26 @@ function handleClick(chosenKey) {
  */
 function changePic() {
     document.getElementById("pic").src = `assets/images/hangmanGamePic` + wrongGuess + `.png`;
+}
+
+/**
+ * Will increment the wins if game is won
+ */
+function gameWon() {
+    if (animalStatus === answer) {
+        let oldScore = parseInt(document.getElementById("win").innerText);
+        document.getElementById("win").innerText = ++oldScore;
+    }
+}
+
+/**
+ * Will increment the losses if game is lost
+ */
+function gameLost() {
+    if (wrongGuess === 6) {
+        let oldScore = parseInt(document.getElementById("loss").innerText);
+        document.getElementById("loss").innerText = ++oldScore;
+    }
 }
 
 randomAnimal();
