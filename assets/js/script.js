@@ -3,42 +3,16 @@ var animals = [
     "cat",
     "lion",
     "tiger",
-    "horse",
-    "donkey",
-    "pig",
-    "panther",
-    "leopard",
     "cow",
     "giraffe",
-    "sheep",
-    "rabbit",
-    "monkey",
     "frog",
     "crocodile",
     "snake",
     "alligator",
-    "turtle",
-    "lizard",
-    "whale",
     "shark",
-    "eel",
-    "crab",
     "crow",
-    "pigeon",
-    "ostrich",
     "hen",
-    "eagle",
-    "dove",
     "zebra",
-    "koala",
-    "kangaroo",
-    "bat",
-    "swan",
-    "boar",
-    "racoon",
-    "goat",
-    "deer",
-    "antelope",
     "wolf",
     "panda"
 ]
@@ -138,6 +112,7 @@ function gameWon() {
     if (animalStatus === answer) {
         let oldScore = parseInt(document.getElementById("win").innerText);
         document.getElementById("win").innerText = ++oldScore;
+        document.getElementById("key-container").innerHTML = `Well done! That was correct!<br> <button id="reset">Play again!</button>`;
     }
 }
 
@@ -148,6 +123,8 @@ function gameLost() {
     if (wrongGuess === 6) {
         let oldScore = parseInt(document.getElementById("loss").innerText);
         document.getElementById("loss").innerText = ++oldScore;
+        document.getElementById("key-container").innerHTML = `Unfortunately you ran out of possible guesses.<br>
+        Correct answer was: ${answer}!<br><button id="reset">Play again!</button>`;
     }
 }
 

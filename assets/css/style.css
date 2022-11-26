@@ -101,15 +101,23 @@ body {
     align-items: center;
     justify-content: center;
     -webkit-tap-highlight-color: transparent;
-  }
+}
   
-  #key-container button:active {
+#key-container button:active {
     background-color: #ff00fb8c;
-  }
+}
 
-  #key-container button:disabled {
+#key-container button:disabled {
     background-color: #8000803d;
-  }
+}
+
+#reset {
+    padding: 5px !important;
+    width: 100px !important;
+    max-width: 100px !important;
+}
+
+/*--------score area--------*/
 
 .score-area {
     background-color: #8000803d;
