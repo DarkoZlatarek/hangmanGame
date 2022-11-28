@@ -10,7 +10,7 @@ let animals = [
     "snake",
     "alligator",
     "shark",
-    "crow",
+    "raven",
     "rooster",
     "zebra",
     "wolf",
@@ -143,6 +143,14 @@ function playAgain() {
     createKeys();
 };
 
+function getRules() {
+    document.getElementById("rules-overlay").style.display = "block";
+};
+
+function getRulesOff() {
+    document.getElementById("rules-overlay").style.display = "none";
+};
+
 /**
  * Gets the hint in the middle of the screen
  * as a help for the user
@@ -150,37 +158,53 @@ function playAgain() {
  function getHintOn() {
     document.getElementById("hint-overlay").style.display = "block";
     if (answer === "dog") {
-        document.getElementById("hint-overlay-text").innerHTML = `Men's best friend!`;
+        document.getElementById("hint-overlay-text").innerHTML = `<p>Men's best friend!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } else if (answer === "cat") {
-        document.getElementById("hint-overlay-text").innerHTML = `Dog's enemy!`;
+        document.getElementById("hint-overlay-text").innerHTML = `<p>Dog's enemy!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } else if (answer === "lion") {
-        document.getElementById("hint-overlay-text").innerHTML = `King of the animals!`;
+        document.getElementById("hint-overlay-text").innerHTML = `<p>King of the animals!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } else if (answer === "tiger") {
-        document.getElementById("hint-overlay-text").innerHTML = `Not a lion!`;
+        document.getElementById("hint-overlay-text").innerHTML = `<p>Not a lion!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } else if (answer === "cow") {
-        document.getElementById("hint-overlay-text").innerHTML = `Will say moo!`;
+        document.getElementById("hint-overlay-text").innerHTML = `<p>Will say moo!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } else if (answer === "giraffe") {
-        document.getElementById("hint-overlay-text").innerHTML = `Longest neck!`;
+        document.getElementById("hint-overlay-text").innerHTML = `<p>Longest neck!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } else if (answer === "frog") {
-        document.getElementById("hint-overlay-text").innerHTML = `Will become a prince when kissed!`;
+        document.getElementById("hint-overlay-text").innerHTML = `<p>Will become a prince when kissed!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } else if (answer === "crocodile") {
-        document.getElementById("hint-overlay-text").innerHTML = `Not an alligator!`;
+        document.getElementById("hint-overlay-text").innerHTML = `<p>Not an alligator!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } else if (answer === "alligator") {
-        document.getElementById("hint-overlay-text").innerHTML = `Not a crocodile!`;
+        document.getElementById("hint-overlay-text").innerHTML = `<p>Not a crocodile!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } else if (answer === "snake") {
-        document.getElementById("hint-overlay-text").innerHTML = `Moves without legs!`;
+        document.getElementById("hint-overlay-text").innerHTML = `<p>Moves without legs!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } else if (answer === "shark") {
-        document.getElementById("hint-overlay-text").innerHTML = `Main character in Jaws movie!`;
-    } else if (answer === "crow") {
-        document.getElementById("hint-overlay-text").innerHTML = `Black bird!`;
+        document.getElementById("hint-overlay-text").innerHTML = `<p>Main character in Jaws movie!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
+    } else if (answer === "raven") {
+        document.getElementById("hint-overlay-text").innerHTML = `<p>Bird - simbol of death!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } else if (answer === "rooster") {
-        document.getElementById("hint-overlay-text").innerHTML = `Wakes you up in the morning!`;
+        document.getElementById("hint-overlay-text").innerHTML = `<p>Wakes you up in the morning!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } else if (answer === "zebra") {
-        document.getElementById("hint-overlay-text").innerHTML = `Black and white horse!`;
+        document.getElementById("hint-overlay-text").innerHTML = `<p>Black and white horse!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } else if (answer === "wolf") {
-        document.getElementById("hint-overlay-text").innerHTML = `Howls at the moon!`;
+        document.getElementById("hint-overlay-text").innerHTML = `<p>Howls at the moon!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } else if (answer === "panda") {
-        document.getElementById("hint-overlay-text").innerHTML = `Black and white cute bear!`;
+        document.getElementById("hint-overlay-text").innerHTML = `<p>Black and white cute bear!</p><br>
+        <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } 
 };
 

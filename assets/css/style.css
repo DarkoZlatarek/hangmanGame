@@ -25,6 +25,8 @@ body {
     height: 2rem;
 }
 
+/*-----------top right corner buttons----------*/
+
 #btn-rules, #btn-hints, #btn-reset {
     position: absolute;
     right: 11%;
@@ -41,7 +43,9 @@ body {
     top: 54%;
 }
 
-#hint-overlay {
+/*-----------overlay----------*/
+
+#hint-overlay, #rules-overlay {
     position: fixed;
     display: none;
     width: 100%;
@@ -54,7 +58,11 @@ body {
     cursor: pointer;
 }
 
-#hint-overlay-text {
+#rules-overlay {
+    display: block;
+}
+
+#hint-overlay-text, #rules-overlay-text {
     position: absolute;
     background-color: white;
     margin: auto;
@@ -64,6 +72,10 @@ body {
     transform: translate(-50%, -50%);
     color: black;
     padding: 30px;
+}
+
+#close-this-window {
+    font-size: 0.5rem;
 }
 
 /* ----------Game layout---------*/
