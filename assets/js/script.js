@@ -1,4 +1,4 @@
-var animals = [
+let animals = [
     "dog",
     "cat",
     "lion",
@@ -15,7 +15,7 @@ var animals = [
     "zebra",
     "wolf",
     "panda"
-]
+];
 
 let answer = "";
 let guessed = [];
@@ -28,7 +28,7 @@ let wrongGuess = 0;
  */
 function randomAnimal() {
     answer = animals[Math.floor(Math.random() * animals.length)];
-}
+};
 
 /**
  * Will create a keyboard for the game
@@ -52,9 +52,9 @@ keys.forEach(key => {
 
     if (insertLineBreak) {
         keyboard.appendChild(document.createElement("br"));
-    }
+    };
 });
-}
+};
 
 /**
  * Will take the answer and split it into letters,
@@ -66,8 +66,7 @@ function guessedAnimal() {
     animalStatus = answer.split("").map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join("");
 
     document.getElementById("word-input").innerHTML = animalStatus;
-}
-
+};
 
 /**
  * Will push the chosen letters into guessed array if it
@@ -104,7 +103,7 @@ function handleClick(chosenKey) {
  */
 function changePic() {
     document.getElementById("pic").src = `assets/images/hangmanGamePic` + wrongGuess + `.png`;
-}
+};
 
 /**
  * Will increment the wins if game is won
@@ -116,7 +115,7 @@ function gameWon() {
         document.getElementById("key-container").innerHTML = `Well done! That was correct!<br> <button id="reset" 
         onclick="resetGame()">Play again!</button>`;
     }
-}
+};
 
 /**
  * Will increment the losses if game is lost
@@ -126,15 +125,15 @@ function gameLost() {
         let oldScore = parseInt(document.getElementById("loss").innerText);
         document.getElementById("loss").innerText = ++oldScore;
         document.getElementById("key-container").innerHTML = `Unfortunately you ran out of possible guesses.<br>
-        Correct answer was: ${answer}!<br><button id="reset" onclick="resetGame()">Play again!</button>`;
+        Correct answer was: ${answer}!<br><button id="reset" onclick="playAgain()">Play again!</button>`;
     }
-}
+};
 
 /**
  * Will reset the game to start with a new word
  * without deleting the scores
  */
-function resetGame() {
+function playAgain() {
     guessed = [];
     wrongGuess = 0;
     document.getElementById("pic").src = `assets/images/hangmanGamePic0.png`;
@@ -142,13 +141,13 @@ function resetGame() {
     randomAnimal();
     guessedAnimal();
     createKeys();
-}
+};
 
 /**
  * Gets the hint in the middle of the screen
  * as a help for the user
  */
-function getHintOn() {
+ function getHintOn() {
     document.getElementById("hint-overlay").style.display = "block";
     if (answer === "dog") {
         document.getElementById("hint-overlay-text").innerHTML = `Men's best friend!`;
@@ -183,7 +182,7 @@ function getHintOn() {
     } else if (answer === "panda") {
         document.getElementById("hint-overlay-text").innerHTML = `Black and white cute bear!`;
     } 
-}
+};
 
 /**
  * Removes the hint from the screen for the user
@@ -191,7 +190,7 @@ function getHintOn() {
  */
 function getHintOff() {
     document.getElementById("hint-overlay").style.display = "none";
-}
+};
 
 randomAnimal();
 createKeys();

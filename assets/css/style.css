@@ -25,7 +25,7 @@ body {
     height: 2rem;
 }
 
-#btn-rules, #btn-hints {
+#btn-rules, #btn-hints, #btn-reset {
     position: absolute;
     right: 11%;
     top: 6%;
@@ -35,6 +35,10 @@ body {
 
 #btn-hints {
     top: 30%;
+}
+
+#btn-reset {
+    top: 54%;
 }
 
 #hint-overlay {
