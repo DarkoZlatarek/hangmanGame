@@ -112,8 +112,8 @@ function gameWon() {
     if (animalStatus === answer) {
         let oldScore = parseInt(document.getElementById("win").innerText);
         document.getElementById("win").innerText = ++oldScore;
-        document.getElementById("key-container").innerHTML = `Well done! That was correct!<br> <button id="reset" 
-        onclick="resetGame()">Play again!</button>`;
+        document.getElementById("key-container").innerHTML = `Well done! That was correct!<br> <button id="play-again" 
+        onclick="playAgain()">Play again!</button>`;
     }
 };
 
@@ -125,7 +125,7 @@ function gameLost() {
         let oldScore = parseInt(document.getElementById("loss").innerText);
         document.getElementById("loss").innerText = ++oldScore;
         document.getElementById("key-container").innerHTML = `Unfortunately you ran out of possible guesses.<br>
-        Correct answer was: ${answer}!<br><button id="reset" onclick="playAgain()">Play again!</button>`;
+        Correct answer was: ${answer}!<br><button id="play-again" onclick="playAgain()">Play again!</button>`;
     }
 };
 
@@ -191,6 +191,23 @@ function playAgain() {
 function getHintOff() {
     document.getElementById("hint-overlay").style.display = "none";
 };
+
+/**
+ * Will reset the game to start with a new word
+ * without deleting the scores
+ */
+ function resetScores() {
+    guessed = [];
+    wrongGuess = 0;
+    document.getElementById("win").innerText = "0";
+    document.getElementById("loss").innerText = "0";
+    document.getElementById("pic").src = `assets/images/hangmanGamePic0.png`;
+    document.querySelector("#key-container").innerHTML = "";
+    randomAnimal();
+    guessedAnimal();
+    createKeys();
+};
+
 
 randomAnimal();
 createKeys();
