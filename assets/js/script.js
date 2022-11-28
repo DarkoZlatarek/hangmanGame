@@ -130,15 +130,24 @@ function gameLost() {
     }
 }
 
+/**
+ * Will reset the game to start with a new word
+ * without deleting the scores
+ */
 function resetGame() {
     guessed = [];
     wrongGuess = 0;
     document.getElementById("pic").src = `assets/images/hangmanGamePic0.png`;
+    document.querySelector("#key-container").innerHTML = "";
     randomAnimal();
     guessedAnimal();
     createKeys();
 }
 
+/**
+ * Gets the hint in the middle of the screen
+ * as a help for the user
+ */
 function getHintOn() {
     document.getElementById("hint-overlay").style.display = "block";
     if (answer === "dog") {
@@ -176,6 +185,10 @@ function getHintOn() {
     } 
 }
 
+/**
+ * Removes the hint from the screen for the user
+ * to continue playing
+ */
 function getHintOff() {
     document.getElementById("hint-overlay").style.display = "none";
 }
