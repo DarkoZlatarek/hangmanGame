@@ -22,12 +22,12 @@ body {
 }
 
 .logo {
-    height: 2rem;
+    height: 2.5rem;
 }
 
 /*-----------top right corner buttons----------*/
 
-#btn-rules, #btn-hints, #btn-reset {
+.top-buttons {
     position: absolute;
     right: 11%;
     top: 6%;
@@ -183,4 +183,36 @@ body {
     float: left;
     margin: auto;
     width: 100px;
+}
+
+/*----------media query------*/
+
+@media only screen and (max-width: 720px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    .logo {
+        height: 2rem;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        height: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 445px) {
+    .heading {
+        font-size: 1rem;
+    }
+
+    .logo {
+        height: 1rem;
+    }
 }
