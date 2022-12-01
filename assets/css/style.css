@@ -58,10 +58,6 @@ body {
     cursor: pointer;
 }
 
-#rules-overlay {
-    display: block;
-}
-
 #hint-overlay-text, #rules-overlay-text {
     position: absolute;
     background-color: white;

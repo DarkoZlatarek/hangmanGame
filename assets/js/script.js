@@ -22,10 +22,6 @@ let guessed = [];
 let animalStatus = null;
 let wrongGuess = 0;
 
-randomAnimal();
-createKeys();
-guessedAnimal();
-
 /**
  * Will generate a random animal from the animals array
  * for the user to guess
@@ -235,3 +231,7 @@ function getHintOff() {
     guessedAnimal();
     createKeys();
 };
+
+randomAnimal();
+createKeys();
+guessedAnimal();
