@@ -167,9 +167,9 @@ body {
 }
 
 #play-again {
-    padding: 5px !important;
-    width: 100px !important;
-    max-width: 100px !important;
+    padding: 2px !important;
+    width: 110px !important;
+    max-width: 110px !important;
 }
 
 /*--------score area--------*/
