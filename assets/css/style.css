@@ -177,12 +177,13 @@ body {
   
 #key-container button:active {
     background-color: #ffffff;
-    color: #00c8ff;
-    border: 2px solid #00c8ff;
+    color: #000000;
+    border: 2px solid #000000;
 }
 
 #key-container button:disabled {
-    background-color: #00c8ff;
+    background-color: #000000b5;
+    color:#ffffff
 }
 
 #play-again {
@@ -281,5 +282,16 @@ body {
         height: 15px;
         width: 70px;
         font-size: 0.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+    #word-input {
+        font-size: 1.2rem;
+    }
+
+    #pic-area img{
+        height: 85%;
     }
 }
