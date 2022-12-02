@@ -64,13 +64,13 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: #00000080;
     cursor: pointer;
 }
 
 #hint-overlay-text, #rules-overlay-text {
     position: absolute;
-    background-color: white;
+    background-color: #b1b1b1;
     margin: auto;
     display: inline-block;
     left: 50%;
@@ -93,7 +93,13 @@ body {
 }
 
 .rules-play-again-button {
-    width: 110px !important;
+    height: 35px;
+    width: 110px;
+    color: #ffffff;
+    background-color: #2525253c;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.1rem;
 }
 
 /* ----------Game layout---------*/
@@ -139,6 +145,7 @@ body {
     background-color: transparent;
     margin: 5px auto;
     font-size: 1.5rem;
+    color:#000000;
 }
 
 /*-----------keyboard-----------*/
@@ -208,6 +215,25 @@ body {
 
 /*----------media query------*/
 
+@media only screen and (max-width: 950px) {
+    #rules-overlay-text {
+        font-size: 0.7rem;
+        padding: 10px;
+    }
+
+    .rules-button {
+        height: 20px;
+        width: 50px;
+        font-size: 0.7rem;
+    }
+
+    .rules-play-again-button {
+        height: 20px;
+        width: 90px;
+        font-size: 0.7rem;
+    }
+}
+
 @media only screen and (max-width: 720px) {
     .heading {
         font-size: 2rem;
@@ -216,6 +242,7 @@ body {
     .logo {
         height: 2rem;
     }
+
 }
 
 @media only screen and (max-width: 540px) {
@@ -235,5 +262,24 @@ body {
 
     .logo {
         height: 1rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #rules-overlay-text {
+        font-size: 0.5rem;
+        padding: 7px;
+    }
+    
+    .rules-button {
+        height: 15px;
+        width: 40px;
+        font-size: 0.5rem;
+    }
+
+    .rules-play-again-button {
+        height: 15px;
+        width: 70px;
+        font-size: 0.5rem;
     }
 }
