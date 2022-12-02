@@ -21,9 +21,9 @@
         <h1 class="heading">
             <img class="logo" src="assets/images/logo.png" alt="hangman game logo"> Hangman Game
         </h1>
-        <button class ="top-buttons" id="btn-rules" onclick="getRules()">Rules</button>
-        <button class ="top-buttons" id="btn-hints" onclick="getHintOn()">Hint</button>
-        <button class ="top-buttons" id="btn-reset" onclick="resetScores()">Reset</button>
+        <button class ="top-button" id="btn-rules" onclick="getRules()">Rules</button>
+        <button class ="top-button" id="btn-hints" onclick="getHintOn()">Hint</button>
+        <button class ="top-button" id="btn-reset" onclick="resetScores()">Reset</button>
     </div>
     
     <div id="hint-overlay" onclick="getHintOff()">
@@ -35,9 +35,11 @@
             <h1>Welcome to the Hangman Game!</h1>
             <p>The game will generate an animal for you to guess.</p>
             <p>Chose the letter on the keyboard on the screen to start guessing the animal letter by letter.</p>
-            <p>If you are stuck, click <button>Hint</button> on the top right corner to help you with the answer.</p>
-            <p>Be careful, if you guess the letter wrongly six times, you lose. However, not to worry, click on <button>Play Again!</button> and your game starts again.</p>
-            <p>If you have too many losses and feel a bit ashamed, you can always click <button>Reset</button> and the scores will go to zero.</p>
+            <p>If you are stuck, click <button class="rules-button" >Hint</button> on the top right corner to help you with the answer.</p>
+            <p>Be careful, if you guess the letter wrongly six times, you lose. However, not to worry, 
+                click on <button class="rules-button rules-play-again-button" >Play Again!</button> and your game starts again.</p>
+            <p>If you have too many losses and feel a bit ashamed, you can always 
+                click <button class="rules-button" >Reset</button> and the scores will go to zero.</p>
             <p>Good luck and most importantly, have fun!</p>
             <p id="close-this-window">*click anywhere on the screen to close this window</p>
         </div>
