@@ -22,6 +22,8 @@ let guessed = [];
 let animalStatus = null;
 let wrongGuess = 0;
 
+let storageKey = +new Date();
+
 /**
  * Will generate a random animal from the animals array
  * for the user to guess
@@ -114,6 +116,7 @@ function gameWon() {
         document.getElementById("win").innerText = ++oldScore;
         document.getElementById("key-container").innerHTML = `Well done! That was correct!<br> <button id="play-again" 
         onclick="playAgain()">Play again!</button>`;
+        localStorage.setItem(storageKey + "_wins", document.getElementById("win").innerText);
     }
 };
 
@@ -126,6 +129,7 @@ function gameLost() {
         document.getElementById("loss").innerText = ++oldScore;
         document.getElementById("key-container").innerHTML = `Unfortunately you ran out of possible guesses.<br>
         Correct answer was: ${answer}!<br><button id="play-again" onclick="playAgain()">Play again!</button>`;
+        localStorage.setItem(storageKey + "_losses", document.getElementById("loss").innerText);
     }
 };
 
@@ -214,22 +218,6 @@ function getRulesOff() {
  */
 function getHintOff() {
     document.getElementById("hint-overlay").style.display = "none";
-};
-
-/**
- * Will reset the game to start with a new word
- * without deleting the scores
- */
- function resetScores() {
-    guessed = [];
-    wrongGuess = 0;
-    document.getElementById("win").innerText = "0";
-    document.getElementById("loss").innerText = "0";
-    document.getElementById("pic").src = `assets/images/hangmanGamePic0.png`;
-    document.querySelector("#key-container").innerHTML = "";
-    randomAnimal();
-    guessedAnimal();
-    createKeys();
 };
 
 randomAnimal();
