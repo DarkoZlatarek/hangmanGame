@@ -20,13 +20,26 @@ body {
     margin-top: 37px;
 }
 
-.heading h1 {
-    margin-top: 0;
-    display: inline-block;
+.heading-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.heading h1 {
+    padding: 1%;
+}
+
+.gradient-text {
+    background: -webkit-linear-gradient(#000000, #00c8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
 .logo {
-    height: 2.5rem;
+    height: 3.2rem;
     display: inline-block;
 }
 
@@ -48,6 +61,13 @@ body {
     color: #00c8ff;
     border: 2px solid #00c8ff;
   }
+
+.top-button:active {  
+    background: -webkit-linear-gradient(#000000, #00c8ff);
+    -webkit-background-clip: padding-box;
+    -webkit-text-fill-color: #ffffff;
+    border: none;
+}
 
 #btn-hints {
     top: 36%;
@@ -150,6 +170,9 @@ body {
     margin: 5px auto;
     font-size: 1.5rem;
     color:#000000;
+    background: -webkit-linear-gradient(#000000, #00c8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /*-----------keyboard-----------*/
@@ -176,24 +199,29 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    -webkit-tap-highlight-color: transparent;
 }
   
 #key-container button:active {
     background-color: #ffffff;
     color: #00c8ff;
-    border: 2px solid #00c8ff;
 }
 
 #key-container button:disabled {
-    background-color: #00c8ffb5;
-    color:#ffffff
+    background: -webkit-linear-gradient(#000000, #00c8ff);
+    -webkit-background-clip: padding-box;
+    -webkit-text-fill-color: #ffffff;
 }
 
 #play-again {
     padding: 2px !important;
     width: 110px !important;
     max-width: 110px !important;
+}
+
+#play-again:active {
+    background: -webkit-linear-gradient(#000000, #00c8ff);
+    -webkit-background-clip: padding-box;
+    -webkit-text-fill-color: #ffffff;
 }
 
 /*--------score area--------*/
@@ -236,6 +264,12 @@ body {
         height: 20px;
         width: 90px;
         font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .heading {
+        font-size: 1.5rem;
     }
 }
 
