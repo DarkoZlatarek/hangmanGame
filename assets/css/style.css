@@ -12,7 +12,7 @@ body {
 }
 
 .heading {
-    font-size: 2rem;
+    font-size: 1.9rem;
     background-color: #b1b1b1;
     width: 85%;
     height: 130px;
@@ -21,8 +21,9 @@ body {
 }
 
 .heading-div {
-    width: 100%;
+    width: 80%;
     height: 100%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -269,38 +270,31 @@ body {
 
 @media only screen and (max-width: 850px) {
     .heading {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
+    }
+
+    .logo {
+        height: 2.5rem;
     }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 515px) {
     .heading {
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 
     .logo {
         height: 2rem;
     }
-
 }
 
-@media only screen and (max-width: 540px) {
-    .heading {
-        font-size: 1.5rem;
-    }
-
-    .logo {
-        height: 1.5rem;
-    }
-}
-
-@media only screen and (max-width: 445px) {
+@media only screen and (max-width: 420px) {
     .heading {
         font-size: 1rem;
     }
 
     .logo {
-        height: 1rem;
+        height: 1.5rem;
     }
 }
 
@@ -322,14 +316,22 @@ body {
         font-size: 0.5rem;
     }
 
-}
-
-@media only screen and (max-width: 375px) {
     #word-input {
         font-size: 1.2rem;
     }
 
     #pic-area img{
         height: 85%;
+    }
+}
+
+
+@media only screen and (max-width: 350px) {
+    .heading {
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        height: 1.2rem;
     }
 }
