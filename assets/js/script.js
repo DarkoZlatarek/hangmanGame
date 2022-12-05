@@ -38,7 +38,7 @@ let storageKey = `${hours}:${minutes}:${seconds} (${date}.${month+1}.${year}.)`;
  */
 function randomAnimal() {
     answer = animals[Math.floor(Math.random() * animals.length)];
-};
+}
 
 /**
  * Will create a keyboard for the game
@@ -62,9 +62,9 @@ keys.forEach(key => {
 
     if (insertLineBreak) {
         keyboard.appendChild(document.createElement("br"));
-    };
+    }
 });
-};
+}
 
 /**
  * Will take the answer and split it into letters,
@@ -76,7 +76,7 @@ function guessedAnimal() {
     animalStatus = answer.split("").map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join("");
 
     document.getElementById("word-input").innerHTML = animalStatus;
-};
+}
 
 /**
  * Will push the chosen letters into guessed array if it
@@ -85,7 +85,7 @@ function guessedAnimal() {
 function handleClick(chosenKey) {
     if (guessed.indexOf(chosenKey) === -1) {
         guessed.push(chosenKey);
-    };
+    }
 
 // Disables already chosen letter
     document.getElementById(chosenKey).setAttribute("disabled", true);
@@ -104,14 +104,14 @@ function handleClick(chosenKey) {
             changePic();
             gameLost();
         }
-};
+}
 
 /**
  * Will change img based on wrongGuess value
  */
 function changePic() {
     document.getElementById("pic").src = `assets/images/hangmanGamePic` + wrongGuess + `.png`;
-};
+}
 
 /**
  * Will increment the wins if game is won
@@ -127,7 +127,7 @@ function gameWon() {
             losses: document.getElementById("loss").innerText  
           }));
     }
-};
+}
 
 /**
  * Will increment the losses if game is lost
@@ -143,7 +143,7 @@ function gameLost() {
             losses: document.getElementById("loss").innerText  
           }));
     }
-};
+}
 
 /**
  * Will reset the game to start with a new word
@@ -157,15 +157,21 @@ function playAgain() {
     randomAnimal();
     guessedAnimal();
     createKeys();
-};
+}
 
+/**
+ * When "rules" button is pressed, will show rules overlay
+ */
 function getRules() {
     document.getElementById("rules-overlay").style.display = "block";
-};
+}
 
+/**
+ * Removes rules overlay when clicked on the screen
+ */
 function getRulesOff() {
     document.getElementById("rules-overlay").style.display = "none";
-};
+}
 
 /**
  * Gets the hint in the middle of the screen
@@ -222,7 +228,7 @@ function getRulesOff() {
         document.getElementById("hint-overlay-text").innerHTML = `<p>Black and white cute bear!</p><br>
         <p id="close-this-window">*click anywhere on the screen to close the hint</p>`;
     } 
-};
+}
 
 /**
  * Removes the hint from the screen for the user
@@ -230,7 +236,7 @@ function getRulesOff() {
  */
 function getHintOff() {
     document.getElementById("hint-overlay").style.display = "none";
-};
+}
 
 randomAnimal();
 createKeys();
