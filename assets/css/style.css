@@ -296,6 +296,12 @@ body {
     .logo {
         height: 1.5rem;
     }
+
+    .top-button {
+        height: 25px;
+        width: 35px;
+        font-size: 0.5rem;
+    }
 }
 
 @media only screen and (max-width: 375px) {
