@@ -22,6 +22,7 @@ let guessed = [];
 let animalStatus = null;
 let wrongGuess = 0;
 
+//variable acting as a "key" for local storage
 let storageKey = +new Date();
 
 /**
@@ -117,6 +118,7 @@ function gameWon() {
         document.getElementById("key-container").innerHTML = `Well done! That was correct!<br> <button id="play-again" 
         onclick="playAgain()">Play again!</button>`;
         localStorage.setItem(storageKey + "_wins", document.getElementById("win").innerText);
+        localStorage.setItem(storageKey + "_losses", document.getElementById("loss").innerText);
     }
 };
 
@@ -129,6 +131,7 @@ function gameLost() {
         document.getElementById("loss").innerText = ++oldScore;
         document.getElementById("key-container").innerHTML = `Unfortunately you ran out of possible guesses.<br>
         Correct answer was: ${answer}!<br><button id="play-again" onclick="playAgain()">Play again!</button>`;
+        localStorage.setItem(storageKey + "_wins", document.getElementById("win").innerText);
         localStorage.setItem(storageKey + "_losses", document.getElementById("loss").innerText);
     }
 };
