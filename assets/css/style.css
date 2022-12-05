@@ -323,6 +323,15 @@ body {
     #pic-area img{
         height: 85%;
     }
+    
+    .pic-guess-area {
+        height: 214px;
+    }
+
+    #guess-animal {
+        margin-top: 0px;
+    }
+    
 }
 
 
