@@ -22,8 +22,15 @@ let guessed = [];
 let animalStatus = null;
 let wrongGuess = 0;
 
-//variable acting as a "key" for local storage
-let storageKey = +new Date();
+//Creating time and date for local storage "key"
+let today = new Date();
+let hours = today.getHours();
+let minutes = today.getMinutes();
+let seconds = today.getSeconds();
+let date = today.getDate();
+let month = today.getMonth();
+let year = today.getFullYear();
+let storageKey = `${hours}:${minutes}:${seconds} (${date}.${month+1}.${year}.)`;
 
 /**
  * Will generate a random animal from the animals array
@@ -117,8 +124,10 @@ function gameWon() {
         document.getElementById("win").innerText = ++oldScore;
         document.getElementById("key-container").innerHTML = `Well done! That was correct!<br> <button id="play-again" 
         onclick="playAgain()">Play again!</button>`;
-        localStorage.setItem(storageKey + "_wins", document.getElementById("win").innerText);
-        localStorage.setItem(storageKey + "_losses", document.getElementById("loss").innerText);
+        localStorage.setItem(storageKey, JSON.stringify({ 
+            wins: document.getElementById("win").innerText,
+            losses: document.getElementById("loss").innerText  
+          }));
     }
 };
 
@@ -131,8 +140,10 @@ function gameLost() {
         document.getElementById("loss").innerText = ++oldScore;
         document.getElementById("key-container").innerHTML = `Unfortunately you ran out of possible guesses.<br>
         Correct answer was: ${answer}!<br><button id="play-again" onclick="playAgain()">Play again!</button>`;
-        localStorage.setItem(storageKey + "_wins", document.getElementById("win").innerText);
-        localStorage.setItem(storageKey + "_losses", document.getElementById("loss").innerText);
+        localStorage.setItem(storageKey, JSON.stringify({ 
+            wins: document.getElementById("win").innerText,
+            losses: document.getElementById("loss").innerText  
+          }));
     }
 };
 
