@@ -85,8 +85,6 @@ function guessedAnimal() {
 function handleClick(chosenKey) {
     if (guessed.indexOf(chosenKey) === -1) {
         guessed.push(chosenKey);
-    } else {
-        null;
     };
 
 // Disables already chosen letter
