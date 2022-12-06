@@ -251,7 +251,7 @@ function resetScores() {
     randomAnimal();
     guessedAnimal();
     createKeys();
-};
+}
 
 randomAnimal();
 createKeys();
