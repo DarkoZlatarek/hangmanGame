@@ -238,6 +238,21 @@ function getHintOff() {
     document.getElementById("hint-overlay").style.display = "none";
 }
 
+/**
+ * Resets the scores to zero
+ */
+function resetScores() {
+    guessed = [];
+    wrongGuess = 0;
+    document.getElementById("win").innerText = "0";
+    document.getElementById("loss").innerText = "0";
+    document.getElementById("pic").src = `assets/images/hangmanGamePic0.png`;
+    document.querySelector("#key-container").innerHTML = "";
+    randomAnimal();
+    guessedAnimal();
+    createKeys();
+};
+
 randomAnimal();
 createKeys();
 guessedAnimal();
