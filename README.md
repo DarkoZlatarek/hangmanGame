@@ -66,3 +66,8 @@ In this Hangman game, the word that will be hiding behind the underscores is a r
 * Scores of the game are stored to a local storage
 * Key property is set to be the time and date stamp the player started playing
 * Value property contains wins and losses counts
+<br>
+
+## **Testing**
+---
+<br>
