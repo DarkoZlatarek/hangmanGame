@@ -65,7 +65,7 @@ body {
 
 .top-button:active {  
     background: -webkit-linear-gradient(#000000, #00c8ff);
-    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
     -webkit-text-fill-color: #ffffff;
     border: none;
 }
@@ -209,7 +209,7 @@ body {
 
 #key-container button:disabled {
     background: -webkit-linear-gradient(#000000, #00c8ff);
-    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
     -webkit-text-fill-color: #ffffff;
 }
 
@@ -221,7 +221,7 @@ body {
 
 #play-again:active {
     background: -webkit-linear-gradient(#000000, #00c8ff);
-    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
     -webkit-text-fill-color: #ffffff;
 }
 
