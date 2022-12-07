@@ -122,3 +122,17 @@ with .png image and following code within the head tag `<link rel="shortcut icon
 * Unfixed bugs
     * When testing the game on safari browser on the iphone 11, keyboard buttons are not resized which makes some of them go to the next line. This is only the case on a Safari browser and on a portrait mode. In landscape mode, buttons are presented correctly.
 
+## **Deployment**
+
+* The website was deployed to the GitHub pages. The steps were:
+    * In the GitHub repository, I clicked on the settings button
+    * Then navigated to the Pages section
+    * There, under "Branch" in dropdown selected "main"
+    * The page then refreshed and provided the link to the completed website
+
+## **Credits**
+* Gradient text and buttons background was taken from [CSS-TRICKS](https://css-tricks.com/snippets/css/gradient-text/)
+* Code for keyboard buttons was a mix of code from youtube video by [dcode](https://www.youtube.com/watch?v=N3cq0BHDMOY) and a project [songBird](https://frapplecat.github.io/songbirb/)
+* Code for hiding letter of the word behind underscores is from a youtube video by [Simon Suh](https://www.youtube.com/watch?v=dgvyE1sJS3Y)
+* overlay for "rules" and "hint" buttons is taken from [w3schools](https://www.w3schools.com/howto/howto_css_overlay.asp)
+
