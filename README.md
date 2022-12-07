@@ -2,7 +2,7 @@
 Hangman Game is worldwide known game where a player is trying to guess the word letter by letter. If the letter player choses is one of the letters in the word they are trying to guess, that letter is added to it while the others are still hidden. If the player choses the letter that is not in the word they are trying to guess, they get one “mistake” and one part of the hanging stickman is drawn. If player makes six mistakes, they lose the game. 
 
 In this Hangman game, the word that will be hiding behind the underscores is a random animal.
-![responsive Hangman Game website](assets/images/responsiveHangmanGame.png)
+![responsive Hangman Game website](assets/images/readme/responsiveHangmanGame.png)
 
 ## **Features**
 ---
@@ -15,7 +15,7 @@ In this Hangman game, the word that will be hiding behind the underscores is a r
 * It is in gradient colors that are in a good contrast with the background
 <br>
 
-![Hangman Game header](assets/images/gameHeading.png)
+![Hangman Game header](assets/images/readme/gameHeading.png)
 
 <br>
 
@@ -24,7 +24,7 @@ In this Hangman game, the word that will be hiding behind the underscores is a r
 * Changes with each mistake the player makes - adds a body part to a hanging stickmen with each wrong guess
 <br>
 
-![Hangman Game image](assets/images/stickmanHangmanGame.png)
+![Hangman Game image](assets/images/readme/stickmanHangmanGame.png)
     
 <br>
 
@@ -35,7 +35,7 @@ In this Hangman game, the word that will be hiding behind the underscores is a r
 * The answer as well as the disabled letters is the same color gradient as the heading
 <br>
 
-![Hangman Game play area](assets/images/playArea.png)
+![Hangman Game play area](assets/images/readme/playArea.png)
 
 <br>
 
@@ -46,7 +46,7 @@ In this Hangman game, the word that will be hiding behind the underscores is a r
 * Each time the player run out of possible guesses, "losses" gets incremented by one
 <br>
 
-![Hangman Game scores](assets/images/scoresHangmanGame.png)
+![Hangman Game scores](assets/images/readme/scoresHangmanGame.png)
 
 <br>
 
@@ -58,7 +58,7 @@ In this Hangman game, the word that will be hiding behind the underscores is a r
 * When hovered over the buttons, border and text color changes to light blue
 <br>
 
-![Hangman Game top buttons](assets/images/topButtons.png)
+![Hangman Game top buttons](assets/images/readme/topButtons.png)
     
 <br>
 
@@ -71,3 +71,54 @@ In this Hangman game, the word that will be hiding behind the underscores is a r
 ## **Testing**
 ---
 <br>
+
+* The game was tested on Chrome, Firefox and Safari browsers and all functions are performing correctly
+* I confirm that scores are incremented correctly on the screen as well as in the local storage
+* By using the devtools device toolbar, I can confirm that the project looks good on all standard screen sizes
+* I can confirm that the colors and font chosen are easy to read and accessible by running it through lighthouse in devtools
+
+<br>
+
+![lighthous devtools](assets/images/readme/lighthouse_HangmanGame.png)
+
+<br>
+
+### Validator testing
+
+* HTML
+    * No errors were returned when passing through the official W3C Validator
+
+    <br>
+
+    ![HTML validator](assets/images/readme/HTML_validator.png)
+
+* CSS
+    * No errors were returned when passing through the official (Jigsaw) Validator
+
+    <br>
+
+    ![CSS validator](assets/images/readme/CSS_validator.png)
+
+* javascript
+    * No errors were returned when passing through the beautifytools javasript validator
+    * Reason for not using JSHint validator is explained in “Bugs” section
+
+    <br>
+
+    ![javascript validator](assets/images/readme/JS_validator.png)
+
+<br>
+
+### Bugs
+
+* Solved bugs
+    * When setting up the local storage, month December was presented as number "11" - checked the module 
+"Built-in Functions - Working With Date Objects" on the corse and saw that
+.getMonth() will generate numbers from 0-11. Fixed it by adding +1 to it.
+    * Icon next to the page title did not load - fixed by changed the favicon.ico that was in root document 
+with .png image and following code within the head tag `<link rel="shortcut icon" href="assets/images/HangmanGameTitleLogo.png">`
+    * javascript validator JSHint was showing me that I have six unused variables, but those were the functions called upon with “onclick” attribute. Couldn’t surpass these warnings in JSHint so I used beautifytools javascript validator where I added `/* jshint esversion:6 */ /* jshint unused:false */` above the javascript code. After that, I got „No syntax errors!“ message.
+
+* Unfixed bugs
+    * When testing the game on safari browser on the iphone 11, keyboard buttons are not resized which makes some of them go to the next line. This is only the case on a Safari browser and on a portrait mode. In landscape mode, buttons are presented correctly.
+
