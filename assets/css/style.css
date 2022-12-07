@@ -64,7 +64,7 @@ body {
   }
 
 .top-button:active {  
-    background: -webkit-linear-gradient(#000000, #00c8ff);
+    background: linear-gradient(#000000, #00c8ff);
     background-clip: padding-box;
     -webkit-text-fill-color: #ffffff;
     border: none;
@@ -208,7 +208,7 @@ body {
 }
 
 #key-container button:disabled {
-    background: -webkit-linear-gradient(#000000, #00c8ff);
+    background: linear-gradient(#000000, #00c8ff);
     background-clip: padding-box;
     -webkit-text-fill-color: #ffffff;
 }
