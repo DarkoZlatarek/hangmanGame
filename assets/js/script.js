@@ -80,7 +80,7 @@ function guessedAnimal() {
 
 /**
  * Will push the chosen letters into guessed array if it
- * does not already exist there, and do nothing if it does
+ * does not already exist there
  */
 function handleClick(chosenKey) {
     if (guessed.indexOf(chosenKey) === -1) {
@@ -91,10 +91,9 @@ function handleClick(chosenKey) {
     document.getElementById(chosenKey).setAttribute("disabled", true);
 
 /** 
-*If chosen letter exists in the answer,
-*guessedAnimal function will be executed
-*otherwise wrongGuess gets incresed by 1
-*and changePic function is executed
+*If chosen letter exists in the answer, guessedAnimal function will be 
+*executed as well as gameWon function, otherwise wrongGuess gets incresed by 1
+*and changePic function is executed as well as gameLost function
 */
     if (answer.indexOf(chosenKey) >= 0) {
         guessedAnimal();
@@ -107,7 +106,7 @@ function handleClick(chosenKey) {
 }
 
 /**
- * Will change img based on wrongGuess value
+ * Will change image based on wrongGuess value
  */
 function changePic() {
     document.getElementById("pic").src = `assets/images/hangmanGamePic` + wrongGuess + `.png`;
@@ -115,6 +114,7 @@ function changePic() {
 
 /**
  * Will increment the wins if game is won
+ * and log the score to local storage
  */
 function gameWon() {
     if (animalStatus === answer) {
@@ -131,6 +131,7 @@ function gameWon() {
 
 /**
  * Will increment the losses if game is lost
+ * and log the score to local storage
  */
 function gameLost() {
     if (wrongGuess === 6) {
